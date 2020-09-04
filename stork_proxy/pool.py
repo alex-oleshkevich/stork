@@ -130,6 +130,9 @@ class ProxyPool:
             try:
                 logging.info("Starting health check task.")
                 await asyncio.gather(*[proxy.health_check() for proxy in self.proxies])
+                logging.info('%s of %s proxies are healthy.' % (
+                    len(self.healthy), len(self.proxies)
+                ))
                 await asyncio.sleep(interval)
             except asyncio.CancelledError:
                 break

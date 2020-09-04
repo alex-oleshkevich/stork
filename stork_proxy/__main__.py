@@ -2,5 +2,9 @@ import sys
 
 from .cli import main
 
-if __name__ == '__main__':
+
+def run():
     main(sys.argv[1:])
+
+if __name__ == '__main__':
+    run()

@@ -74,6 +74,10 @@ def main(argv):
 
     arguments = parser.parse_args(argv)
     variables = vars(arguments).copy()
+    if 'func' not in variables:
+        parser.print_help()
+        return
+
     del variables["func"]
     del variables["command"]
 

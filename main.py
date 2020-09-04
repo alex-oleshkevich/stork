@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import sys
-from stork_proxy.cli import main
+from stork_proxy import run
 
-main(sys.argv[1:])
+run()

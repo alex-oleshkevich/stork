@@ -1,2 +1,2 @@
-# stork
-Rotating proxy server.
+# Stork - the rotating proxy server
+
